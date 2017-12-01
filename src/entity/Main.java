@@ -1,6 +1,8 @@
 package entity;
 
-public class Main {
+import view.Display;
+
+public class Main implements Display{
     private  String greeting;
     private String version;
 
@@ -30,4 +32,13 @@ public class Main {
         this.version = version;
     }
 
+    @Override
+    public void displayMenu() {
+
+    }
+
+    @Override
+    public void chooseItem() {
+
+    }
 }

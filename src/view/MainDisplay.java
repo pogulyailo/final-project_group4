@@ -25,7 +25,6 @@ public class MainDisplay implements Display{
         this.greeting = main.getGreeting();
         this.version = main.getVersion();
     }
-
     public String getGreeting() {
         return greeting;
     }
@@ -41,7 +40,6 @@ public class MainDisplay implements Display{
     public void setVersion(String version) {
         this.version = version;
     }
-
     public void displayMenu() {
         System.out.println(greeting);
         System.out.println(version);
@@ -52,16 +50,13 @@ public class MainDisplay implements Display{
 
         chooseItem();
     }
-
     public void chooseItem() {
         Scanner scanner = new Scanner(System.in);
         int item = scanner.nextInt();
         switch (item){
-            case 1: youTubeAnalytics.displayMenu();
-            case 2: settings.displayMenu();
-            case 3: System.exit(0);
+            case 1: youTubeAnalytics.displayMenu();               //переходим на экран YouTube
+            case 2: settings.displayMenu();                       //переходим на экран Settings
+            case 3: System.exit(0);                        //выход из программы
         }
-
-
     }
 }
