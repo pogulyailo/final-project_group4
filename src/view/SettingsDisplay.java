@@ -1,12 +1,12 @@
-/*package view;
+package view;
 
 import entity.Main;
+import entity.Settings;
 import entity.YouTubeAnalytics;
 
 import java.util.Scanner;
 
 public class SettingsDisplay implements Display{
-    private String settings;
     private static final String MENU = "Select an action :";
     private static final String ITEM1 = "1. Return to home screen";
     private static final String ITEM2 = "2. Edit Use cache";
@@ -15,22 +15,15 @@ public class SettingsDisplay implements Display{
 
     private Main main;
     private YouTubeAnalytics youTubeAnalytics;
+    private Settings settings;
 
     public SettingsDisplay() {
         this.main = new Main();
         this.youTubeAnalytics = new YouTubeAnalytics();
-        this.settings = settings.getSettings();                     //что не так?
+        this.settings = new Settings();                   //что не так?
     }
-    public String getSettings() {
-        return settings;
-    }
-
-    public void setSettings(String settings) {
-        this.settings = settings;
-    }
-
-    public void displayMenu() {
-        System.out.println(settings);
+        public void displayMenu() {
+        System.out.println(settings.getSettings());
         System.out.println(MENU);
         System.out.println(ITEM1);
         System.out.println(ITEM2);
@@ -49,4 +42,4 @@ public class SettingsDisplay implements Display{
             case 4:                                         // Изменить Отображение времени затраченного не выполнение
         }
     }
-}*/
+}

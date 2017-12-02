@@ -7,7 +7,7 @@ import entity.YouTubeAnalytics;
 import java.util.Scanner;
 
 public class YouTubeDisplay implements Display{
-    private String youtubeanalytics;
+
     private static final String MENU = "Select a task :";
     private static final String ITEM1 = "1. Return to home screen";
     private static final String ITEM2 = "2. Lists all tasks";
@@ -21,16 +21,9 @@ public class YouTubeDisplay implements Display{
         this.main = new Main();
         this.youTubeAnalytics = new YouTubeAnalytics();
         this.settings = new Settings();
-        this.youtubeanalytics = youTubeAnalytics.getYoutubeanalytics();
     }
-    public String getYoutubeanalytics() {
-        return youtubeanalytics;
-    }
-    public void setYoutubeanalytics(String youtubeanalytics) {
-        this.youtubeanalytics = youtubeanalytics;
-    }
-        public void displayMenu(){
-        System.out.println(youtubeanalytics);
+    public void displayMenu(){
+        System.out.println(youTubeAnalytics.getYoutubeanalytics());
         System.out.println(MENU);
         System.out.println(ITEM1);
         System.out.println(ITEM2);
