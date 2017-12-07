@@ -1,8 +1,7 @@
 package entity;
 
-import view.Display;
 
-public class Settings implements Display {
+public class Settings{
     private String settings;
 
     public Settings() {
@@ -19,15 +18,5 @@ public class Settings implements Display {
 
     public void setSettings(String settings) {
         this.settings = settings;
-    }
-
-    @Override
-    public void displayMenu() {
-
-    }
-
-    @Override
-    public void chooseItem() {
-
     }
 }

@@ -1,8 +1,6 @@
 package entity;
 
-import view.Display;
-
-public class YouTubeAnalytics implements Display{
+public class YouTubeAnalytics{
     private String youtubeanalytics;
 
     public YouTubeAnalytics(){
@@ -21,14 +19,4 @@ public class YouTubeAnalytics implements Display{
         this.youtubeanalytics = youtubeanalytics;
     }
 
-    @Override
-    public void displayMenu() {
-
-    }
-
-    @Override
-    public void chooseItem() {
-
-    }
 }
-

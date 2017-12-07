@@ -5,7 +5,7 @@ public class SuperSettings {
     public Time time;
 
     static String toLowerCase(boolean input) {               // метод для считывания стринга, который преобразует все символы данной строки в нижний регистр, для "TruE" or "False"
-        String work = input.toLowerCase();
+        String work = toLowerCase(input);
         if (work.equals("true") || work.equals("false")) {  //проверка на валидность данных
             if (work.equals("true")) {
                 return "true";
