@@ -3,15 +3,22 @@ package settings;
 public class SuperSettings {
     public Cache cache;
     public Time time;
+    public static final String VERSION = "0.0.1";
 
-    static String toLowerCase(boolean input) {               // метод для считывания стринга, который преобразует все символы данной строки в нижний регистр, для "TruE" or "False"
-        String work = toLowerCase(input);
-        if (work.equals("true") || work.equals("false")) {  //проверка на валидность данных
-            if (work.equals("true")) {
-                return "true";
-            } else return "false";
+    public static boolean trueFalseCheckFromString(String Input) {
+        String workTemp = Input.toLowerCase();                                  //переводим введённый стринг в lowercase
+        if (workTemp.equals("true") || workTemp.equals("false")) {              //проверка на валидность данных
+            return true;
         } else
-            System.err.println("Invalid input");    // ошибка в меню если не "true" or "False"
-        return "error";                             // если не правильные даннык возвращает error
+            System.err.println("Wrong input data");                             // если введено отличающиеся от "true" or "False" - выдёет ошибку в меню
+        return false;                                                           // возвращает значение false если не правильные данные
+    }
+
+    protected static boolean setWorkStatus(String Input) {
+        String work = Input.toLowerCase();
+        if (work.equals("true")) {                                              //проверка на "true";
+            return true;
+        } else
+            return false;
     }
 }

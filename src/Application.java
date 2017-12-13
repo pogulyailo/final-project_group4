@@ -1,3 +1,4 @@
+
 import settings.Cache;
 import settings.Time;
 import view.MainDisplay;
@@ -15,7 +16,7 @@ public class Application {
         settingsDisplay.displayMenu();
 
         Cache cache = new Cache();
-        cache.CacheWork();
+        cache.setCacheWork("dsffdsfsd");
         Time time = new Time();
         time.TimeWork();
     }

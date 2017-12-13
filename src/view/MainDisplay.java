@@ -1,8 +1,6 @@
 package view;
 
 import entity.Main;
-import entity.Settings;
-import entity.YouTubeAnalytics;
 
 import java.util.Scanner;
 
@@ -14,13 +12,15 @@ public class MainDisplay implements Display{
     private static final String ITEM3 = "3. Exit";
 
     private Main main;
-    private YouTubeAnalytics youTubeAnalytics;
-    private Settings settings;
+    private MainDisplay mainDisplay;
+    private YouTubeDisplay youTubeDisplay;
+    private SettingsDisplay settingsDisplay;
 
     public MainDisplay() {
         this.main = new Main();
-        this.youTubeAnalytics = new YouTubeAnalytics();
-        this.settings = new Settings();
+        this.mainDisplay = new MainDisplay();
+        this.youTubeDisplay = new YouTubeDisplay();
+        this.settingsDisplay = new SettingsDisplay();
     }
 
     public void displayMenu() {
@@ -37,9 +37,10 @@ public class MainDisplay implements Display{
         Scanner scanner = new Scanner(System.in);
         int item = scanner.nextInt();
         switch (item){
-            case 1: youTubeAnalytics.displayMenu();               //переходим на экран YouTube
-            case 2: settings.displayMenu();                       //переходим на экран Settings
-            case 3: System.exit(0);                        //выход из программы
+            case 1: youTubeDisplay.displayMenu();               //переходим на экран YouTube
+            case 2: settingsDisplay.displayMenu();              //переходим на экран Settings
+            case 3: System.exit(0);                      //выход из программы
         }
     }
+
 }

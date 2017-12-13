@@ -1,6 +1,7 @@
 package entity;
 
 public class Main{
+    public static Object superSettings;
     private  String greeting;
     private String version;
 
@@ -30,4 +31,5 @@ public class Main{
         this.version = version;
     }
 
-    }
+
+}
